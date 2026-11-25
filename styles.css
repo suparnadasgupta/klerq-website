@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --navy: #232B35;
-  --blue: #0096FF;
-  --blue-dark: #0B5FB0;
+  --navy: #1A2332;
+  --blue: #1F4C8C;
+  --blue-dark: #122F5C;
   --yellow: #FFC600;
   --yellow-soft: #FFEEA7;
   --yellow-ink: #4A3700;
@@ -69,14 +69,14 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   height: 76px;
 }
-.logo img { height: 28px; width: auto; }
+.logo img { height: 32px; width: auto; }
 .nav {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 .nav a.navlink {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--navy);
   position: relative;
@@ -179,8 +179,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 8px;
   font-weight: 700;
-  font-size: 15px;
-  padding: 13px 24px;
+  font-size: 16px;
+  padding: 15px 26px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -231,9 +231,9 @@ img { max-width: 100%; display: block; }
 .hero-wave svg { width: 100%; height: auto; display: block; }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 48px;
+  align-items: stretch;
   position: relative;
   z-index: 2;
 }
@@ -258,7 +258,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-grid .hero-badge { margin-bottom: 22px; }
 .hero h1 {
-  font-size: 62px;
+  font-size: 68px;
   font-weight: 700;
   color: var(--white);
 }
@@ -271,9 +271,9 @@ img { max-width: 100%; display: block; }
   -webkit-box-decoration-break: clone;
 }
 .hero .sub {
-  font-size: 20px;
+  font-size: 22px;
   color: rgba(255,255,255,0.78);
-  max-width: 560px;
+  max-width: 580px;
   margin-top: 20px;
 }
 .hero-ctas { display: flex; align-items: center; gap: 22px; margin-top: 32px; flex-wrap: wrap; }
@@ -297,6 +297,24 @@ img { max-width: 100%; display: block; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-blob { animation: none !important; }
+}
+
+/* ---------- Full-bleed photo band ---------- */
+.photo-band { position: relative; height: 460px; overflow: hidden; }
+.photo-band img { width: 100%; height: 100%; object-fit: cover; }
+.photo-band-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(26,35,50,0.9) 0%, rgba(26,35,50,0.58) 50%, rgba(26,35,50,0.12) 100%);
+}
+.photo-band-overlay h2 { color: var(--white); font-size: 38px; max-width: 560px; }
+.photo-band-overlay p { color: rgba(255,255,255,0.82); font-size: 19px; max-width: 480px; margin-top: 16px; }
+@media (max-width: 900px) {
+  .photo-band { height: 420px; }
+  .photo-band-overlay h2 { font-size: 28px; }
+  .photo-band-overlay p { font-size: 16px; }
 }
 
 /* ---------- Compact client logo strip ---------- */
@@ -348,8 +366,8 @@ img { max-width: 100%; display: block; }
 /* ---------- Generic section ---------- */
 section { padding: 60px 0; }
 .section-head { max-width: 640px; margin-bottom: 32px; }
-.section-head h2 { font-size: 34px; font-weight: 700; }
-.section-head p { color: var(--text-soft); font-size: 17px; margin-top: 14px; }
+.section-head h2 { font-size: 40px; font-weight: 700; }
+.section-head p { color: var(--text-soft); font-size: 19px; margin-top: 14px; }
 .section-grey {
   background:
     radial-gradient(640px 320px at 100% 0%, rgba(0,150,255,0.07), transparent 60%),
@@ -436,8 +454,8 @@ section { padding: 60px 0; }
   transition: border-radius .3s ease;
 }
 .pillar-card:hover .ico { border-radius: 60% 40% 35% 65% / 45% 55% 45% 55%; }
-.pillar-card h3 { font-size: 18px; margin-bottom: 8px; }
-.pillar-card p { font-size: 14px; color: var(--text-soft); margin-bottom: 16px; }
+.pillar-card h3 { font-size: 20px; margin-bottom: 8px; }
+.pillar-card p { font-size: 16px; color: var(--text-soft); margin-bottom: 16px; }
 .pillar-card .explore { font-weight: 700; font-size: 14px; color: var(--blue-dark); }
 .sub-features { list-style: none; margin: 0 0 16px; padding: 0; }
 .sub-features li { font-size: 13px; color: var(--text-soft); padding-left: 18px; position: relative; margin-bottom: 6px; }
@@ -456,7 +474,7 @@ section { padding: 60px 0; }
   font-family: 'Space Grotesk', sans-serif;
 }
 .diff-card h3 { font-size: 18px; margin-bottom: 8px; }
-.diff-card p { font-size: 14px; color: var(--text-soft); margin: 0; }
+.diff-card p { font-size: 16px; color: var(--text-soft); margin: 0; }
 
 /* ---------- Split section: two bold colour panels, not a plain list ---------- */
 .split-grid {
@@ -619,7 +637,7 @@ section { padding: 60px 0; }
   z-index: 0;
   line-height: 1;
 }
-.quote-card p.q { font-size: 16px; margin: 0 0 20px; position: relative; z-index: 1; }
+.quote-card p.q { font-size: 18px; margin: 0 0 20px; position: relative; z-index: 1; }
 .quote-who { display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
 .avatar {
   width: 48px; height: 48px;
@@ -643,7 +661,8 @@ section { padding: 60px 0; }
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 30px 70px -18px rgba(0,0,0,0.55);
-  aspect-ratio: 4 / 3.1;
+  height: 100%;
+  min-height: 460px;
   animation: floatSlow3 6.5s ease-in-out infinite;
 }
 @keyframes floatSlow3 {
@@ -724,8 +743,8 @@ section { padding: 60px 0; }
   border-radius: var(--radius);
   padding: 24px;
 }
-.sec-card h3 { font-size: 16px; color: var(--white); margin-bottom: 8px; }
-.sec-card p { font-size: 13px; color: rgba(255,255,255,0.65); margin: 0; }
+.sec-card h3 { font-size: 18px; color: var(--white); margin-bottom: 8px; }
+.sec-card p { font-size: 15px; color: rgba(255,255,255,0.65); margin: 0; }
 .sec-card ul { list-style: none; margin: 14px 0 0; padding: 0; }
 .sec-card ul li { font-size: 12.5px; color: rgba(255,255,255,0.7); padding-left: 18px; position: relative; margin-bottom: 7px; }
 .sec-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--yellow); font-weight: 700; }
@@ -967,6 +986,7 @@ footer { background: var(--yellow); padding: 56px 0 32px; position: relative; }
   .hero h1 { font-size: 42px; }
   .hero-badge { font-size: 18px; }
   .hero-badge .badge-ico { width: 28px; height: 28px; font-size: 14px; }
+  .hero-photo { height: auto; aspect-ratio: 4 / 3; min-height: 0; margin-top: 32px; }
   .nav { display: none; }
   .nav-toggle { display: flex; }
   .mobile-nav { display: block; }
